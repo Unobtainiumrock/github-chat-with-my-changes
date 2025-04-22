@@ -246,8 +246,9 @@ class RAG(Component):
             logger.debug(f"RetrieverOutput obtained for search query: {
                          search_query}")
         except Exception as e:
-            log_error(f"Error retrieving documents: {e}")
-            raise
+            print(f"Warning: Retrieval error: {e}")
+            # Provide a fallback retrieval result
+            retriever_output = {"documents": [], "metadata": []}
 
         # Map the retrieved doc indices to actual Documents in memory
         try:

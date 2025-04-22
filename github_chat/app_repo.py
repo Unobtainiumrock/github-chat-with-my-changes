@@ -85,9 +85,9 @@ def init_rag(_repo_path: str) -> Optional[RAG]:
         # Initialize database manager
         db_manager = DatabaseManager(repo_name=repo_name)
 
-        # Load or create the database
+        # Load or create the database with the exact path provided
         try:
-            needs_transform = db_manager.load_or_create_db()
+            needs_transform = db_manager.load_or_create_db(source_dir=_repo_path)
         except Exception as e:
             log_error(
                 f"An error occurred while loading or creating the database: {e}")

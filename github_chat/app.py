@@ -4,6 +4,9 @@ import tempfile
 from rag import RAG
 from test_rag import initialize_test_database
 from logging_config import logger  # Import centralized logger
+import warnings
+
+warnings.filterwarnings("ignore", category=RuntimeWarning)
 
 
 @st.cache_resource

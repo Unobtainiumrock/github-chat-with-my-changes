@@ -1,3 +1,19 @@
+# Important Quick Note
+
+1. My perspective on the continued development of GitHub Chat differed from the direction it took. I envisioned a more iterative development process, with a strong emphasis on comprehensive logging and enhanced developer tooling on the front end to provide deeper insights. 
+
+2. It's part-way through a complete rewrite, so I'm not going to continue with it whenever I get time.
+
+3. The rewrite was going to include:
+    - Migration away from streamlit to something with better state management on the frontend. I haven't been fully sold on Next.js, so I was likely going to do a React/Typescript + Redux/Toolkit implementation.
+    - A more robust logging system, with a focus on developer experience.
+    
+    The reason I wanted to switch over was because it got insanely messy trying to manage the state of the chat interface with streamlit. I wasn't able to have clean pagination for the top-k context documents, and having a new instance to page through for each agent response.
+
+Here's a breif glimpse at what a chat looked like on the front end if you're too lazy to run everything:
+
+![frontend](frontend-preview.png)
+
 # RAG Code Assistant
 
 A Retrieval-Augmented Generation (RAG) system for analyzing and understanding code repositories. The system provides both a command-line interface and a web UI for interacting with your codebase. In this repo there are two versions of the RAG system:
@@ -83,7 +99,7 @@ OPENAI_API_KEY = "your-openai-api-key-here"
 
 1. Run the demo version (with test data):
 ```bash
-poetry run streamlit run github_chat/app.py
+poetry run streamlit run github_chat/app_repo.py
 ```
 
 2. Run the repository analysis version:
@@ -93,7 +109,7 @@ poetry run streamlit run github_chat/app_repo.py
 
 ### Command Line Interface
 
-Run the RAG system directly:
+Run the RAG system directly (Might need to fix this later.):
 ```bash
 poetry run python rag.py
 ```
