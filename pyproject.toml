@@ -18,6 +18,7 @@ adalflow = { extras = ["openai"], version = "^0.2.6" }
 faiss-cpu = "^1.9.0.post1"
 streamlit = "^1.31.1"
 scikit-learn = "^1.6.1"
+pyvis = "^0.3.2"
 
 [tool.poetry.group.dev.dependencies]
 debugpy = "^1.8.11"
