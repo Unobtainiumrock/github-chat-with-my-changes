@@ -83,12 +83,12 @@ OPENAI_API_KEY = "your-openai-api-key-here"
 
 1. Run the demo version (with test data):
 ```bash
-poetry run streamlit run app.py
+poetry run streamlit run github_chat/app.py
 ```
 
 2. Run the repository analysis version:
 ```bash
-poetry run streamlit run app_repo.py
+poetry run streamlit run github_chat/app_repo.py
 ```
 
 ### Command Line Interface
