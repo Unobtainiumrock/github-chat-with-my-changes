@@ -2,7 +2,7 @@
 
 1. My perspective on the continued development of GitHub Chat differed from the direction it took. I envisioned a more iterative development process, with a strong emphasis on comprehensive logging and enhanced developer tooling on the front end to provide deeper insights. 
 
-2. It's part-way through a complete rewrite, so I'm not going to continue with it whenever I get time.
+2. It's part-way through a complete rewrite, so I'm going to continue with it whenever I get time.
 
 3. The rewrite was going to include:
     - Migration away from streamlit to something with better state management on the frontend. I haven't been fully sold on Next.js, so I was likely going to do a React/Typescript + Redux/Toolkit implementation.
